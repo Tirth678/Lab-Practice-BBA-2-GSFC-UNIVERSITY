@@ -1,11 +1,10 @@
 #include<stdio.h>
 int main(){
-    int a=1;
-    while(a<1000){
-        if(a%2 != 0){
-            printf("%d\n", a);
-            a++;
+    for(int i=1; i<10; i++){
+        if(i%2 !=0){
+            printf("%d\n", i);
         }
+
     }
 
     return 0;
