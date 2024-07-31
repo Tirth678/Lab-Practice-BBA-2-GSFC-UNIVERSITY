@@ -18,9 +18,12 @@ int main(){
     printf("enter marks of fifth subject\n");
     scanf("%d", &sub5);
     if((sub1+sub2+sub3+sub4+sub5)/5 <=100 && sub1<20 && sub2<20 && sub3<20 &&sub4<20 && sub5<20){
+        printf("Roll number of student = %d\n", seat);
         printf("Name of student = %s\n", name);
+        printf("status: PASSED\n");
 
     }
 
     return 0;
 }
+// kr rha solve
