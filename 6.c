@@ -1,15 +1,16 @@
 #include<stdio.h>
 int main(){
-    int principle;
-    int rateOfIntrest;
-    int NumOfYears;
+    int principle, rateOfIntrest, NumOfYears;
+    float result;
     printf("enter value of principle\n");
     scanf("%d", &principle);
     printf("enter rate of intrest\n");
     scanf("%d", &rateOfIntrest);
-    printf("%d", &NumOfYears);
-    scanf("%d", &NumOfYears);
-    
+    printf("enter number of years\n");
+    scanf("%d", &NumOfYears); 
+    result = (principle*rateOfIntrest*NumOfYears)/3;
+    printf("simple intrest = %f\n", result);
+
 
     return 0;
 }
