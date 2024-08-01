@@ -1,21 +1,17 @@
-#include <stdio.h>
-int isPalindrome(int num) {
-    int reversed = 0, original = num, remainder;
-    while (num != 0) {
-        remainder = num % 10;
-        reversed = reversed * 10 + remainder;
-        num /= 10;
-    }
-    return original == reversed;
-}
+#include<stdio.h>
 int main() {
-    int num;
-    printf("Enter a number: ");
+    int num, originalNum, remainder, result = 0;
+    printf("Enter a three-digit integer: ");
     scanf("%d", &num);
-    if (isPalindrome(num)) {
-        printf("%d is a palindrome.\n", num);
-    } else {
-        printf("%d is not a palindrome.\n", num);
+    originalNum = num;
+    while (originalNum != 0) {
+        remainder = originalNum % 10;
+       result += remainder * remainder * remainder;
+       originalNum /= 10;
     }
+    if (result == num)
+        printf("%d is an Armstrong number.", num);
+    else{
+        printf("%d is not an Armstrong number.", num);
     return 0;
-}
+}}

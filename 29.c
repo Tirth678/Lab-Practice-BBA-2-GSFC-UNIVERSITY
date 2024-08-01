@@ -1,29 +1,21 @@
 #include <stdio.h>
-#include <ctype.h>
-int containsFourNumbers(const char *input) {
-    int count = 0;
-    int inNumber = 0;
-    while (*input) {
-        if (isdigit(*input)) {
-            if (!inNumber) {
-                count++;
-                inNumber = 1;
-            }
-        } else {
-            inNumber = 0;
-        }
-        input++;
+int isPalindrome(int num) {
+    int reversed = 0, original = num, remainder;
+    while (num != 0) {
+        remainder = num % 10;
+        reversed = reversed * 10 + remainder;
+        num /= 10;
     }
-    return count == 4;
+    return original == reversed;
 }
 int main() {
-    char input[100];
-    printf("Enter a string: ");
-    fgets(input, sizeof(input), stdin);
-    if (containsFourNumbers(input)) {
-        printf("The input contains exactly four numbers.\n");
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (isPalindrome(num)) {
+        printf("%d is a palindrome.\n", num);
     } else {
-        printf("The input does not contain exactly four numbers.\n");
+        printf("%d is not a palindrome.\n", num);
     }
     return 0;
 }
